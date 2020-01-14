@@ -1,0 +1,25 @@
+.naviWrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.naviItem {
+  padding: 10px 30px 10px 50px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 25px;
+  transition: all .2s ease;
+}
+
+.naviItem:hover {
+  padding-right: 40px;
+}
+
+.active {
+  color: white;
+}
