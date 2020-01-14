@@ -1,3 +1,7 @@
+html {
+  scroll-snap-type: y proximity;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -5,25 +9,60 @@
 }
 
 .section {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: center;
 }
 
 .first {
   background-color: #3c40c6;
+  color: white;
 }
 
 .second {
   background-color: #4bcffa;
+  color: white;
 }
 
 .third {
   background-color: #05c46b;
+  color: white;
 }
 
 .fourth {
   background-color: #ffc048;
+  color: white;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 750px;
+    margin-left: 200px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    width: 600px;
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0;
+  }
 }

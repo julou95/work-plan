@@ -8,18 +8,128 @@
 }
 
 .naviItem {
-  padding: 10px 30px 10px 50px;
   margin-bottom: 10px;
   text-decoration: none;
   font-weight: 700;
   font-size: 25px;
+  color: white;
+  border-bottom: 0 solid white;
+  height: 40px;
+  transition: all .2s ease;
+  user-select: none;
+}
+
+.navItemInner {
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 50px;
+  height: 40px;
   transition: all .2s ease;
 }
 
-.naviItem:hover {
-  padding-right: 40px;
+.active {
+  border-bottom: 5px solid white;
 }
 
-.active {
-  color: white;
+.menuIcon {
+  z-index: 100;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menuIconMiddle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 100%;
+  background: white;
+  transition: all .2s ease;
+}
+
+.menuIcon:hover .menuIconMiddle:after,
+.menuIcon:hover .menuIconMiddle:before
+{
+  transform: translateX(10px);
+}
+
+
+.menuIconMiddle:before, .menuIconMiddle:after {
+  position: absolute;
+  content: '';
+  height: 6px;
+  width: 100%;
+  background: white;
+  transition: all .2s ease;
+}
+
+.menuIconMiddle:before {
+  top: -16px;
+}
+.menuIconMiddle:after {
+  top: 16px;
+}
+
+.open:before,
+.menuIcon:hover
+.open:before {
+  transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -8px);
+}
+.open:after,
+.menuIcon:hover
+.open:after {
+  transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 8px);
+}
+
+.drawer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 0;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+  transition: all .2s ease-in-out;
+}
+
+.drawerOpen {
+  width: 100%;
+}
+
+.drawerNavigationWrapper {
+  opacity: 0;
+  transition: opacity .5s ease;
+} 
+
+.drawerOpen .drawerNavigationWrapper {
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .navItemInner {
+    padding: 0 15px 0 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menuIcon {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .naviWrapper {
+    visibility: hidden;
+  }
 }
