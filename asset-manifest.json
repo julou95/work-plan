@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/julou/static/css/main.4b0a04ea.chunk.css",
+    "main.js": "/julou/static/js/main.ef110a1f.chunk.js",
+    "main.js.map": "/julou/static/js/main.ef110a1f.chunk.js.map",
+    "runtime-main.js": "/julou/static/js/runtime-main.57a2a6f0.js",
+    "runtime-main.js.map": "/julou/static/js/runtime-main.57a2a6f0.js.map",
+    "static/js/2.511030c3.chunk.js": "/julou/static/js/2.511030c3.chunk.js",
+    "static/js/2.511030c3.chunk.js.map": "/julou/static/js/2.511030c3.chunk.js.map",
+    "index.html": "/julou/index.html",
+    "precache-manifest.07bb039b1bda60a69de201409ed680ec.js": "/julou/precache-manifest.07bb039b1bda60a69de201409ed680ec.js",
+    "service-worker.js": "/julou/service-worker.js",
+    "static/css/main.4b0a04ea.chunk.css.map": "/julou/static/css/main.4b0a04ea.chunk.css.map",
+    "static/js/2.511030c3.chunk.js.LICENSE": "/julou/static/js/2.511030c3.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57a2a6f0.js",
+    "static/js/2.511030c3.chunk.js",
+    "static/css/main.4b0a04ea.chunk.css",
+    "static/js/main.ef110a1f.chunk.js"
+  ]
+}
