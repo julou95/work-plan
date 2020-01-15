@@ -1,5 +1,6 @@
 html {
   scroll-snap-type: y proximity;
+  background: #292929;
 }
 
 .App {
@@ -18,22 +19,23 @@ html {
 }
 
 .first {
-  background-color: #3c40c6;
+  background-image: linear-gradient(to bottom left, #3c40c6, #4bcffa);
   color: white;
 }
 
 .second {
-  background-color: #4bcffa;
+  background-image: linear-gradient(to bottom right, #4bcffa, #05c46b);
   color: white;
 }
 
 .third {
-  background-color: #05c46b;
+  background-image: linear-gradient(to bottom left, #05c46b, #ffc048);
+
   color: white;
 }
 
 .fourth {
-  background-color: #ffc048;
+  background-image: linear-gradient(to bottom right, #ffc048, #ff5e57);
   color: white;
 }
 
@@ -65,4 +67,8 @@ html {
     padding: 0 15px;
     margin: 0;
   }
+}
+
+.rellaxIndex {
+  z-index: 1;
 }

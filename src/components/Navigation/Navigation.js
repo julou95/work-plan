@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavHashLink as HashLink } from 'react-router-hash-link';
 import history from '../../createHistory';
 
 import NavigationContent from './NavigationContent';
@@ -21,13 +20,17 @@ const Navigation = () => {
     if (!menuOpen) {
       setMenuOpen(true);
       setTimeout(() => {
+        document.body.style = 'overflow: hidden;';
         document.getElementById('drawerContent').classList.toggle('drawerOpen');
-      }, 500)
+        document.getElementById('drawerNavigationWrapper').classList.toggle('drawerOpenNavi');
+      }, 200)
     } else {
       setTimeout(() => {
+        document.body.style = '';
         document.getElementById('drawerContent').classList.toggle('drawerOpen');
-        setTimeout(() => setMenuOpen(false), 500);
-      }, 500)
+        document.getElementById('drawerNavigationWrapper').classList.toggle('drawerOpenNavi');
+        setTimeout(() => setMenuOpen(false), 200);
+      }, 200)
     }
 
     
@@ -36,17 +39,21 @@ const Navigation = () => {
   return (
     <>
       <div className="menuIcon" onClick={openMenu}>
-        <div className={`menuIconMiddle ${menuOpen ? 'open' : ''}`}></div>
+        <div className={`menuIconMiddle ${menuOpen ? 'open' : ''}`} />
       </div>
       {
         menuOpen &&
-        <div className="drawer">
-          <div id="drawerContent" className="drawerContent">
-            <div class="drawerNavigationWrapper">
+        <>
+          <div className="drawer">
+            <div id="drawerContent" className="drawerContent">
+            </div>
+          </div>
+          <div id="drawerNavigationWrapper">
+            <div className="drawerNavigationWrapper">
               <NavigationContent activeRoute={activeRoute} />
             </div>
           </div>
-        </div>
+        </>
       }
       <div className="naviWrapper">
         <NavigationContent activeRoute={activeRoute} />
