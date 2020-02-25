@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/julou/static/css/main.29b1e1ac.chunk.css",
-    "main.js": "/julou/static/js/main.1ed2a668.chunk.js",
-    "main.js.map": "/julou/static/js/main.1ed2a668.chunk.js.map",
+    "main.js": "/julou/static/js/main.35505b47.chunk.js",
+    "main.js.map": "/julou/static/js/main.35505b47.chunk.js.map",
     "runtime-main.js": "/julou/static/js/runtime-main.57a2a6f0.js",
     "runtime-main.js.map": "/julou/static/js/runtime-main.57a2a6f0.js.map",
-    "static/js/2.231248ce.chunk.js": "/julou/static/js/2.231248ce.chunk.js",
-    "static/js/2.231248ce.chunk.js.map": "/julou/static/js/2.231248ce.chunk.js.map",
+    "static/js/2.c274d62e.chunk.js": "/julou/static/js/2.c274d62e.chunk.js",
+    "static/js/2.c274d62e.chunk.js.map": "/julou/static/js/2.c274d62e.chunk.js.map",
     "index.html": "/julou/index.html",
-    "precache-manifest.f7b671baa2d190345e055d876a1e9803.js": "/julou/precache-manifest.f7b671baa2d190345e055d876a1e9803.js",
+    "precache-manifest.3eb704e83e8f8597e6d91cf10ce18e21.js": "/julou/precache-manifest.3eb704e83e8f8597e6d91cf10ce18e21.js",
     "service-worker.js": "/julou/service-worker.js",
     "static/css/main.29b1e1ac.chunk.css.map": "/julou/static/css/main.29b1e1ac.chunk.css.map",
-    "static/js/2.231248ce.chunk.js.LICENSE": "/julou/static/js/2.231248ce.chunk.js.LICENSE"
+    "static/js/2.c274d62e.chunk.js.LICENSE": "/julou/static/js/2.c274d62e.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.57a2a6f0.js",
-    "static/js/2.231248ce.chunk.js",
+    "static/js/2.c274d62e.chunk.js",
     "static/css/main.29b1e1ac.chunk.css",
-    "static/js/main.1ed2a668.chunk.js"
+    "static/js/main.35505b47.chunk.js"
   ]
 }
