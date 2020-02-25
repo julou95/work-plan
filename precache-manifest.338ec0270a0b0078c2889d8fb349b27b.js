@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f58bb9972c142984b6ca938ad16dd547",
+    "revision": "a10c2c3fa1eb7ef1b3f839cccca5695e",
     "url": "/julou/index.html"
   },
   {
-    "revision": "f8b20f76166ea640aaff",
+    "revision": "d71131d5764b561f189d",
     "url": "/julou/static/css/main.29b1e1ac.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/julou/static/js/2.c274d62e.chunk.js.LICENSE"
   },
   {
-    "revision": "f8b20f76166ea640aaff",
-    "url": "/julou/static/js/main.35505b47.chunk.js"
+    "revision": "d71131d5764b561f189d",
+    "url": "/julou/static/js/main.ac255ff5.chunk.js"
   },
   {
     "revision": "41ab8b077ed4099db27b",
