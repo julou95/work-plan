@@ -1,0 +1,99 @@
+.wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.first {
+  background-color: #3c40c6;
+}
+
+.third {
+  background-color: #ffc048;
+}
+
+.ball {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 9px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+}
+
+
+.one, .two, .three {
+  top: 40px;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.one {
+  left: 15px;
+}
+
+.two {
+  left: 42px;
+  animation-delay: .2s;
+}
+
+.three {
+  left: 69px;
+  animation-delay: .4s;
+}
+
+@keyframes move {
+  0% { top: 40px; }
+  40% { top: 20px; }
+  80% { top: 40px; }
+}
+
+
+.horizontal {
+  position: absolute;
+  width: 70px;
+  height: 16px;
+  background-color: white;
+  bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.2);
+}
+
+.vertical {
+  position: absolute;
+  bottom: 20px;
+  width: 16px;
+  height: 36px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 8px;
+  animation-name: reSize;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.left {
+  left: 15px;
+}
+
+.center {
+  left: 42px;
+  animation-delay: .2s;
+}
+
+.right {
+  right: 15px;
+  animation-delay: .4s;
+}
+
+@keyframes reSize {
+  0% { height: 36px; }
+  40% { height: 60px; }
+  80% { height: 36px; }
+}

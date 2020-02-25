@@ -1,0 +1,54 @@
+.overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(black, 0);
+  animation: showOverlay 0.3s forwards;
+
+  &.closeOverlay {
+    background-color: rgba(black, 0.4);
+    animation: hideOverlay 0.3s ease 0.3s forwards;
+  }
+}
+
+.modal {
+  z-index: 2;
+  box-sizing: border-box;
+  position: fixed;
+  width: 90vw;
+  background-color: aliceblue;
+  padding: 10px 0 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  bottom: -100%;
+  left: 5vw;
+  animation: showModal 0.3s ease forwards;
+
+  &.close {
+    bottom: 0;
+    animation: hideModal 0.3s ease 0.3s forwards;
+  }
+}
+
+@keyframes showOverlay {
+  from { background-color: rgba(black, 0.0); }
+  to { background-color: rgba(black, 0.4); }
+}
+
+@keyframes hideOverlay {
+  from { background-color: rgba(black, 0.4); }
+  to { background-color: rgba(black, 0); }
+}
+
+@keyframes showModal {
+  from { bottom: -100% }
+  to { bottom: 0 }
+}
+
+@keyframes hideModal {
+  from { bottom: 0 }
+  to { bottom: -100% }
+}

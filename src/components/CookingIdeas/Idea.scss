@@ -1,0 +1,79 @@
+.idea {
+  width: 100%;
+  padding: 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  color: black;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+  text-align: left;
+
+  .headRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .headLeft {
+    display: flex;
+  }
+
+  .headRight {
+    display: flex;
+    align-items: center;
+  }
+
+  .day {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .icon {
+    transform: rotate(0);
+    transition: all .3s ease;
+  }
+  .collapsedIcon {
+    transform: rotate(-180deg);
+  }
+
+  .ideaContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    &.collapsed {
+      height: 50px;
+    }
+  }
+}
+
+.remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 0;
+
+  &:focus {
+    background-color: lightgray;
+    outline: none;
+  }
+}
+
+.weekDay {
+  color: gray;
+  width: 25px;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid gray;
+  font-style: italic;
+  font-weight: normal;
+}

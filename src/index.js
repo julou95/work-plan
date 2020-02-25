@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Router } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom';
+
+import registerServiceWorker from './registerServiceWorker';
 
 import history from './createHistory';
 
 ReactDOM.render(
-  <Router history={history}>
+  <HashRouter history={history}>
     <App />
-  </Router>,
+  </HashRouter>,
   document.getElementById('root')
 );
+
+registerServiceWorker();

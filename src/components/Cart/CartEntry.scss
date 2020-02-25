@@ -1,0 +1,54 @@
+.entry {
+  user-select: none;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+  text-align: left;
+  font-size: 18px;
+
+  .title {
+    width: 100%;
+  }
+
+  &.checked {
+    background-color: rgba(white,0.6);
+
+    .title {
+      font-style: italic;
+      text-decoration: line-through;
+      color: gray;
+    }
+    .category {
+      opacity: 0.6;
+    }
+  }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+}
+
+.moreButton {
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  color: gray;
+  margin-left: 5px;
+  border-radius: 12px;
+
+  &:focus {
+    outline: none;
+    background-color: lightgray;
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://julou95.github.io/julou/",
+  "homepage": "https://julou95.github.io/work-plan/",
   "name": "julou",
   "version": "0.1.0",
   "private": true,
@@ -18,8 +18,9 @@
     "babel-preset-react-app": "^9.1.0",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "3.2.0",
-    "dotenv": "8.2.0",
+    "dotenv": "^8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.1.0",
@@ -29,9 +30,10 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "^1.6.1",
-    "file-loader": "4.3.0",
+    "file-loader": "^4.3.0",
+    "firebase": "^7.10.0",
     "fs-extra": "^8.1.0",
-    "gh-pages": "^2.2.0",
+    "googleapis": "^39.2.0",
     "html-webpack-plugin": "4.0.0-beta.5",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
@@ -39,6 +41,8 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "mini-css-extract-plugin": "0.8.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.5.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -48,8 +52,10 @@
     "postcss-safe-parser": "4.0.1",
     "react": "^16.12.0",
     "react-app-polyfill": "^1.0.5",
+    "react-datepicker2": "^3.0.15",
     "react-dev-utils": "^10.0.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
     "react-rellax": "^1.0.3",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
@@ -58,22 +64,21 @@
     "resolve": "1.12.2",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.0",
+    "scriptjs": "^2.5.9",
     "semver": "6.3.0",
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "2.2.1",
     "ts-pnp": "1.1.5",
     "url-loader": "2.3.0",
     "webpack": "4.41.2",
-    "webpack-dev-server": "3.9.0",
-    "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "rm -rf ./dist && NODE_ENV=production ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js",
     "test": "node scripts/test.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -144,5 +149,19 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "classnames": "^2.2.6",
+    "fs": "0.0.1-security",
+    "gh-pages": "^2.2.0",
+    "html-loader": "^0.5.5",
+    "net": "^1.0.2",
+    "readline": "^1.3.0",
+    "sw-precache-webpack-plugin": "^1.0.0",
+    "tls": "0.0.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-manifest-plugin": "^2.2.0"
   }
 }

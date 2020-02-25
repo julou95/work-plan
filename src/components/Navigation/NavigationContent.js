@@ -1,57 +1,50 @@
 import React from 'react';
+import cx from 'classnames';
 import { NavHashLink as HashLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
+import Icon, { icons, sizes } from '../Icon/Icon';
 
-import './Navigation.css';
+import styles from './Navigation.scss';
 
-const NavigationContent = ({ activeRoute }) => {
+const NavigationContent = ({ active }) => {
   return (
-    <>
+    <div className={styles.innerWrapper}>
       <HashLink
-        className="naviItem"
+        className={styles.naviItem}
         smooth
         to="#first"
-        activeClassName={activeRoute === '#first' ? 'active' : ''}
+        id={active === 1 ? 'active' : undefined}
       >
-        <div className="navItemInner">
-          FIRST
-        </div>
+        <Icon className={cx(styles.icon, {[styles.active]: active === 1})} icon={icons.calendar} size={sizes.lg} />
       </HashLink>
 
       <HashLink
-        className="naviItem"
+        className={styles.naviItem}
         smooth
         to="#second"
-        activeClassName={activeRoute === '#second' ? 'active' : ''}
+        id={active === 2 ? 'active' : undefined}
       >
-        <div className="navItemInner">
-          SECOND
-        </div>
+        <Icon className={cx(styles.icon, {[styles.active]: active === 2})} icon={icons.shoppingCart} size={sizes.lg} />
       </HashLink>
 
       <HashLink
-        className="naviItem"
+        className={styles.naviItem}
         smooth
         to="#third"
-        activeClassName={activeRoute === '#third' ? 'active' : ''}
+        id={active === 3 ? 'active' : undefined}
       >
-        <div className="navItemInner">
-          THIRD
-        </div>
+        <Icon className={cx(styles.icon, {[styles.active]: active === 3})} icon={icons.grill} size={sizes.lg} />
       </HashLink>
 
       <HashLink
-        className="naviItem"
+        className={styles.naviItem}
         smooth
         to="#fourth"
-        activeClassName={activeRoute === '#fourth' ? 'active' : ''}
+        id={active === 4 ? 'active' : undefined}
       >
-        <div className="navItemInner">
-          FOURTH
-        </div>
+        <Icon className={cx(styles.icon, {[styles.active]: active === 4})} icon={icons.check} size={sizes.lg} />
       </HashLink>
-    </>
-  )
+    </div>
+  );
 }
 
 export default NavigationContent;
