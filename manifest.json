@@ -13,6 +13,11 @@
       "sizes": "96x96"
     },
     {
+      "src": "logo_60.png",
+      "type": "image/png",
+      "sizes": "160x160"
+    },
+    {
       "src": "logo_192.png",
       "type": "image/png",
       "sizes": "192x192"
