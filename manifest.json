@@ -1,6 +1,6 @@
 {
-  "short_name": "WorkPlan",
-  "name": "Work Planner for JK",
+  "short_name": "WorkPlanner",
+  "name": "WorkPlanner",
   "icons": [
     {
       "src": "logo_512.png",
