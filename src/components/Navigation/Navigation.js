@@ -1,14 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import history from '../../createHistory';
+import NavKnob from '../NavKnob/NavKnob';
 
 import NavigationContent from './NavigationContent';
 
-import './Navigation.css';
+import styles from './Navigation.scss';
+
+const backgroundColors = [
+  '#3c40c6',
+  '#4bcffa',
+  '#ffc048',
+  '#ff5e57',
+];
 
 const Navigation = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeRoute, setActiveRoute] = useState('#first');
-  history.listen( location =>  {
+  useEffect(() => {
+    styling();
+  });
+
+  const styling = () => {
+    const navWrapper = document.getElementById('navWrapper');
+    navWrapper.style.backgroundColor = backgroundColors[active-1];
+
+    const activeElement = document.getElementById('active');
+    const activeOffset = activeElement.getBoundingClientRect().x;
+
+    const knob = document.getElementById('knob');
+    knob.style.left = `${activeOffset - 15}px`;
+  };
+
+  const [activeRoute, setActiveRoute] = useState(window.location.hash);
+
+  history.listen(location =>  {
     if (location.hash !== "") {
       setActiveRoute(location.hash);
     } else {
@@ -16,49 +39,28 @@ const Navigation = () => {
     }
   });
 
-  const openMenu = () => {
-    if (!menuOpen) {
-      setMenuOpen(true);
-      setTimeout(() => {
-        document.body.style = 'overflow: hidden;';
-        document.getElementById('drawerContent').classList.toggle('drawerOpen');
-        document.getElementById('drawerNavigationWrapper').classList.toggle('drawerOpenNavi');
-      }, 200)
-    } else {
-      setTimeout(() => {
-        document.body.style = '';
-        document.getElementById('drawerContent').classList.toggle('drawerOpen');
-        document.getElementById('drawerNavigationWrapper').classList.toggle('drawerOpenNavi');
-        setTimeout(() => setMenuOpen(false), 200);
-      }, 200)
-    }
+  let active = 1;
 
-    
-    console.log(menuOpen)
+  console.log('activeRoute', activeRoute);
+
+  switch (activeRoute) {
+    case '#/#second':
+      active = 2;
+      break;
+    case '#/#third':
+      active = 3;
+      break;
+    case '#/#fourth':
+      active = 4;
+      break;
+    default:
+      active = 1;
   }
   return (
-    <>
-      <div className="menuIcon" onClick={openMenu}>
-        <div className={`menuIconMiddle ${menuOpen ? 'open' : ''}`} />
-      </div>
-      {
-        menuOpen &&
-        <>
-          <div className="drawer">
-            <div id="drawerContent" className="drawerContent">
-            </div>
-          </div>
-          <div id="drawerNavigationWrapper">
-            <div className="drawerNavigationWrapper">
-              <NavigationContent activeRoute={activeRoute} />
-            </div>
-          </div>
-        </>
-      }
-      <div className="naviWrapper">
-        <NavigationContent activeRoute={activeRoute} />
-      </div>
-    </>
+    <div id="navWrapper" className={styles.naviWrapper}>
+      <NavKnob color={backgroundColors[active-1]} />
+      <NavigationContent active={active} />
+    </div>
   )
 };
 

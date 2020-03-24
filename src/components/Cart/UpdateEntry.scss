@@ -1,0 +1,60 @@
+.editWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+
+.updateGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.editInput {
+  -webkit-appearance: none;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+    border-color: #4bcffa;
+  }
+}
+
+.categoryButton {
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.deleteButton, .saveButton{
+  -webkit-appearance: none;
+  border: none;
+  width: 50%;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.deleteButton {
+  background-color: transparent;
+  color: #951e1e;
+  margin-right: 5px;
+}
+
+.saveButton {
+  background-color: #4bcffa;
+  margin-left: 5px;
+}

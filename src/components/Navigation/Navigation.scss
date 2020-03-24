@@ -1,0 +1,73 @@
+.naviWrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  bottom: 0;
+  transition: all .5s ease;
+  z-index: 1;
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.naviItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 25px;
+  color: white;
+  border-bottom: 0 solid white;
+  height: 40px;
+  width: 40px;
+  user-select: none;
+}
+
+@media screen and (max-width: 991px) {
+  .navItemInner {
+    padding: 0 15px 0 30px;
+  }
+}
+
+.activeKnob {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  bottom: 40px;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.ONE {
+  background-color: #3c40c6;
+}
+.TWO {
+  background-color: #4bcffa;
+}
+.THREE {
+  background-color: #ffc048;
+}
+.FOUR {
+  background-color: #ff5e57;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  transition: all .6s ease;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.active {
+  position: absolute;
+  top: -10px;
+  color: white;
+}

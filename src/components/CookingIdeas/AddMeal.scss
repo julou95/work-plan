@@ -1,0 +1,132 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.header {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.creator {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 50px;
+  color: black;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  appearance: none;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  padding: 5px 10px;
+  font-size: 20px;
+  text-align: center;
+  background-color: transparent;
+  color: gray;
+  margin-bottom: 10px;
+
+  &:focus {
+    outline: none;
+    color: black;
+    border-bottom: 2px solid #ffc048;
+  }
+  &::placeholder {
+    font-style: italic;
+    color: lightgray;
+  }
+}
+
+.picker {
+  font-size: 20px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #ffc048;
+  border-radius: 5px;
+  margin: 0 10px;
+  height: 40px;
+  width: 40px;
+  color: white;
+  &:focus {
+    outline: none;
+  }
+}
+
+.weekDay {
+  padding: 10px 0;
+  width: 30px;
+}
+
+.splitter {
+  padding: 10px 0;
+  color: lightgray;
+}
+
+.day, .month, .year {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.day, .month {
+  width: 30px;
+}
+
+.year {
+  width: 50px;
+}
+
+.actionWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.save, .delete {
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.save {
+  background-color: #ffc048;
+  color: white;
+  margin-left: 5px;
+}
+
+.delete {
+  background-color: transparent;
+  color: #951e1e;
+  margin-right: 5px;
+}
